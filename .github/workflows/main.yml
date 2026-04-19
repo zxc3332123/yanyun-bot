@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 複製儲存庫內容
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: 設定 Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.13'
 
@@ -26,6 +26,6 @@ jobs:
         run: python bot.py
 
       - name: 儲存記憶 (last_link.txt)
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update last news link"
