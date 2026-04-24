@@ -50,11 +50,11 @@ def send_to_discord(title, link, img_url):
         "embeds": [{
             "title": "🏮 《燕雲十六聲》最新情報",
             # 將紅線的台詞放在描述最上方，並與標題 {title} 做區隔
-            "description": f"「老大，我又給你帶來新消息了，說好要給我松子糖的，你該不會又忘記了吧？🍬」\n\n**{title}**",
+            "description": f"「老弟，這是最新消息，趕快打開來看看吧!」\n\n**{title}**",
             "url": link,
             "color": 16711680,  # 燕雲風的紅色
             "image": {"url": img_url},
-            "footer": {"text": "紅線特派員 · 期待松子糖中"}
+            "footer": {"text": "趙大哥 · 躲在皇宮中"}
         }]
     }
     res = requests.post(WEBHOOK_URL, json=payload)
